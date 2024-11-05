@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tools-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tools-table th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.tools-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tools-table img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.tools-table td:hover {
+  background-image: url('https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.tools-table td:nth-child(2):hover {
+  background-image: url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.tools-table td:nth-child(3):hover {
+  background-image: url('https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.tools-table td:nth-child(4):hover {
+  background-image: url('https://images.pexels.com/photos/260689/pexels-photo-260689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.tools-table td:nth-child(5):hover {
+  background-image: url('https://images.pexels.com/photos/277014/pexels-photo-277014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
