@@ -1,0 +1,43 @@
+const axios = require('axios');
+const cron = require('node-cron');
+const SlackWebhook = require('slack-webhook');
+
+// Replace with your API endpoint and credentials
+const apiEndpoint = 'https://api.ai-tools.com/latest-data';
+const apiKey = 'YOUR_API_KEY';
+
+// Set up scheduler to run every 5 minutes
+cron.schedule('*/5 * * * *', async () => {
+  try {
+    // Fetch latest data from API
+    const response = await axios.get(apiEndpoint, {
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+      },
+    });
+
+    // Parse response data to extract top 5 tools
+    const tools = response.data.tools.slice(0, 5);
+
+    // Format data for Slack
+    const slackMessage = formatToolsForSlack(tools);
+
+    // Post to Slack using Webhook
+    const webhook = new SlackWebhook('YOUR_WEBHOOK_URL');
+    await webhook.send(slackMessage);
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+// Function to format tools for Slack
+function formatToolsForSlack(tools) {
+  const message = {
+    text: 'Top 5 AI Tools:',
+    attachments: tools.map((tool) => ({
+      title: tool.name,
+      text: tool.description,
+    })),
+  };
+  return message;
+}
