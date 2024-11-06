@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: black;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 0;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
+</head>
+<body>
+
+    <div class="marquee">
+        <span> Welcome to fuzzy-chainsaw </span>
+        <span> This bot connects to multiple data sources, retrieves relevant information, and sends scheduled notifications to Slack channels or team leads. </span>
+        <span> With customizable schedules and message formats, it ensures timely updates and helps keep teams informed. </span>
+        <span> It is a mesmerizing mirage, an illusion. </span>
+        <!-- Add mirror reflection -->
+        <div class="marquee-reflection">
+          <span> Welcome to fuzzy-chainsaw </span>
+          <span> This bot connects to multiple data sources, retrieves relevant information, and sends scheduled notifications to Slack channels or team leads. </span>
+          <span> With customizable schedules and message formats, it ensures timely updates and helps keep teams informed. </span>
+          <span> It is a mesmerizing mirage, an illusion. </span>
+        </div>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* Mirror effect styles */
+
+.marquee {
+  position: relative;
+}
+
+.marquee-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(-1); /* Mirror effect */
+  opacity: 0.5; /* Adjust opacity to desired level */
+}
+
+.marquee span {
+  position: relative;
+  z-index: 1; /* Ensure text is on top of reflection */
+}
+
+.marquee-reflection span {
+  color: white; /* Invert text color for reflection */
+  text-shadow: 0 0 5px black; /* Add shadow to reflection text */
+}
